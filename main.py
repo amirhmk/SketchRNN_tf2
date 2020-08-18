@@ -12,7 +12,7 @@ print("tf: {}".format(tf.version.VERSION))
 print("tf.keras: {}".format(K.__version__))
 print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
 
-from sketchrnn import models, dataset, utils
+from sketchrnn import models, dataset
 data_class = 'rabbit' #@param ["cat","eye","rabbit"]
 data = np.load(f'{data_class}.npz',encoding='latin1',allow_pickle=True)
 data_train = [dataset.cleanup(d) for d in data['train']]
